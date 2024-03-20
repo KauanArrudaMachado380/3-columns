@@ -1,0 +1,167 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+:root{
+
+    /* cores */ 
+
+    --cor-primeira: hsl(31, 77%, 52%);
+    --cor-segunda: hsl(184, 100%, 22%);
+    --cor-terceira: hsl(179, 100%, 13%);
+
+    --cor-paragrafo: hsla(0, 0%, 100%, 0.75);
+    --cor-fundo: hsl(0, 0%, 95%);
+
+    /* fontes */
+
+    --fonte-titulo: "Big Shoulders Display", sans-serif;
+    --fonte-paragrafo: "Lexend Deca", sans-serif;
+
+}
+
+
+body{
+    background-color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20%;
+}
+
+.artigos{
+    padding: 2em 0 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sedans{
+    background-color: var(--cor-primeira);
+    
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+}
+
+.suvs{
+    background-color: var(--cor-segunda);
+}
+
+.luxury{
+    background-color: var(--cor-terceira);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* cor das letras dos botões */
+
+.cor1{
+    color: var(--cor-primeira);
+}
+
+.cor2{
+    color: var(--cor-segunda);
+}
+
+.cor3{
+    color: var(--cor-terceira);
+}
+
+/* configuração do texto, título, botões e imagem */
+
+.grid__imagem{
+    width: 25%;
+}
+
+.titulo{
+    color: var(--cor-fundo);
+    font-weight: bold;
+    font-size: 2em;
+    margin: 1em 0;
+    font-family: var(--fonte-titulo);
+}
+
+.paragrafo{
+    color: var(--cor-paragrafo);
+    font-size: 15px;
+    padding: 0 2rem 5rem 0;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-family: var(--fonte-paragrafo);
+}
+
+.botao{
+    background-color: var(--cor-fundo);
+    padding: 0.8em;
+    width: 55%;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao:hover{
+    background-color: transparent;
+    border: 1px solid var(--cor-fundo);
+    color: var(--cor-fundo);
+}
+
+/* rodapé do site */
+
+.rodape{
+    margin-top: 2rem;
+}
+
+.rodape__paragrafo{
+    font-family: var(--fonte-paragrafo);
+    font-weight: 300;
+}
+
+.rodape__links{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+    
+    body{
+        height: auto;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        margin: 5rem 0 3rem 0;
+    }
+
+    .sedans{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .luxury{
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .paragrafo{
+        margin-right: 1em;
+        padding-bottom: 2rem;
+    }
+
+    .rodape{
+        width: 300px;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
